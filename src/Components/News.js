@@ -354,10 +354,12 @@ export default class News extends Component {
         <Grid container rowSpacing={1} columnSpacing={24} >
         {this.state.articles.map((element) => {
             return <Grid xs={4} justifyContent="center" display="flex">
+                    
                     <Item key={element.url}>
                     <NewsItem title={element.title?element.title:""} description={element.description?element.description:""} imageUrl={element.urlToImage?element.urlToImage:""} newsUrl={element.url?element.url:""}/>
                     {console.log(element)}
                     </Item>
+                    
                    </Grid>
         })}
         </Grid>  

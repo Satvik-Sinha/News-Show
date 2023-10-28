@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import {Link,BrowserRouter} from 'react-router-dom'
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Business', 'Entertainment','Health','Science','Sports','Technology'];
@@ -79,11 +80,44 @@ function DrawerAppBar(props) {
             News-Displayer
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
+           
+            
+              <Link to="/">
+                <Button sx={{ color: '#fff' }}>
+                  Home
+                </Button>
+              </Link>
+              <Link to="/sports">
+                <Button sx={{ color: '#fff' }}>
+                  Sports
+                </Button>
+              </Link>
+              <Link to="/business">
+                <Button sx={{ color: '#fff' }}>
+                  Business
+                </Button>
+              </Link>
+              <Link to="/entertainment">
+                <Button sx={{ color: '#fff' }}>
+                  Entertainment
+                </Button>
+              </Link>
+              <Link to="/health">
+                <Button sx={{ color: '#fff' }}>
+                  Health
+                </Button>
+              </Link>
+              <Link to="/science">
+                <Button sx={{ color: '#fff' }}>
+                  Science
+                </Button>
+              </Link>
+              <Link to="/technology">
+                <Button sx={{ color: '#fff' }}>
+                  Technology
+                </Button>
+              </Link>
+                
           </Box>
         </Toolbar>
       </AppBar>
